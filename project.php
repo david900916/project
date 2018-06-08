@@ -31,13 +31,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	$account=$_POST['account']; //輸入使用者的帳號
     $password = $_POST['password']; //輸入使用者的密碼
 	//=========取得查詢結果筆數=======
-	if(isset($_POST['adduserButton'])){
+	if(isset($_POST['adduserButton'])){// 判斷新增票卷按鈕
 	$sql="SELECT * FROM users";	
 	$result=$db->query($sql);
 	$num = $result->rowCount();
 	$num +=1;
 	}
-	if(isset($_POST['addtickButton'])){
+	if(isset($_POST['addtickButton'])){//判斷新增使用者按鈕
 	$sql2="SELECT * FROM products";	
 	$result=$db->query($sql);
 	$num = $result->rowCount();
@@ -45,30 +45,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 	}
 	//==========新增點卷==============
 	if(isset($_POST['addtickButton'])){
-      $db->query("INSERT INTO products ( id, name, price) VALUES ( '$num2' ,'$ticketname', '$price')");//新增此資料
+      $db->query("INSERT INTO products ( id, name, price) VALUES ( '$num2' ,'$ticketname', '$price')");//新增此票卷資料
    }
 	if(isset($_POST['deleteticketButton'])){
-	$db->query("DELETE FROM products WHERE name ='$ticketname' "); //刪除此資料
+	$db->query("DELETE FROM products WHERE name ='$ticketname' "); //刪除此票卷資料
 	}
 	if(isset($_POST['reviseticketButton'])){
-	$sql = $db->query("UPDATE `products` SET `price` = '$price' WHERE name ='$ticketname' "); //修改此資料
+	$sql = $db->query("UPDATE `products` SET `price` = '$price' WHERE name ='$ticketname' "); //修改此票卷資料
 	}
-	if(isset($_POST['inquireticketButton'])){
+	if(isset($_POST['inquireticketButton'])){ //搜尋票卷資料
 		$rs=$db->query("SELECT * FROM products where name=$ticketname and  price=$price");
 		$result= $rs ->fetch();
 		echo '<pre>',print_r($result),'</pre>';
 		}
 	//==========新增用戶==============
 	if(isset($_POST['adduserButton'])){
-      $db->query("INSERT INTO users ( id, name,account, password) VALUES ( '$num' ,'$name','$account','$password')"); //新增此資料
+      $db->query("INSERT INTO users ( id, name,account, password) VALUES ( '$num' ,'$name','$account','$password')"); //新增此使用者資料
    }
 	if(isset($_POST['deleteuserButton'])){
-	$db->query("DELETE FROM users WHERE name ='$name' "); //刪除此資料
+	$db->query("DELETE FROM users WHERE name ='$name' "); //刪除此使用者資料
 	}
 	if(isset($_POST['reviseuserButton'])){
-	$db->query("UPDATE `users` SET `password` = '$password' WHERE name ='$name' "); //修改此資料
+	$db->query("UPDATE `users` SET `password` = '$password' WHERE name ='$name' "); //修改此使用者資料
 	}
-	if(isset($_POST['inquireuserButton'])){
+	if(isset($_POST['inquireuserButton'])){//搜尋此使用者資料
 		$rs=$db->query("SELECT * FROM users where name=$name and account=$account and password=$password");
 		$result= $rs ->fetch();
 		echo '<pre>',print_r($result),'</pre>';
