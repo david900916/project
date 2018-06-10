@@ -1,7 +1,7 @@
 <html>
 <body>
 <h2>點卷新增</h2>
-<form action="projectphp.php" method="POST">
+<form action="project-php.php" method="POST">
     <input type="text"   name="ticketname" value="" placeholder="點卷名稱" required>
     <input type="text" 	 name="price" value="" placeholder="所需點數" required>
     <input type="submit" name="addticketButton" value="新增" >
