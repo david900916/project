@@ -60,7 +60,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $result= $rs ->fetch();
     echo '<pre>',print_r($result),'</pre>';
     }
-	 header("refresh:3;URL=http://localhost/projecthtml.php");
+	 header("refresh:3;URL=http://localhost/project-html.php");
 	 
 	//$sql->execute(); //執行
 	//if (!$result) echo "New OK";
