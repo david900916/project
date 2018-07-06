@@ -5,4 +5,6 @@
 <a href="UserQuery.php">使用者查詢</a><P ALIGN=LEFT、CENTER、RIGHT>
 <a href="Card.php">卡片</a><P ALIGN=LEFT、CENTER、RIGHT>
 <a href="index.php">登入</a><P ALIGN=LEFT、CENTER、RIGHT></CENTER>
+最新消息<P ALIGN=LEFT、CENTER、RIGHT></CENTER>
+
 </form>
