@@ -7,6 +7,7 @@
     <input type="text"   name="Passwd" value="" placeholder="密碼" required>
 	<input type="text"   name="Class" value="" placeholder="班級" required>
     <input type="submit" name="adduserButton" value="新增">
+	<a href="addManyuser.php">批次新增</a>
 	<a href="User Manager AP.php">返回</a>
 	<a href="HOME.php">返回首頁</a>
 	
