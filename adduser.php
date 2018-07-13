@@ -20,12 +20,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $UserID=$_POST['UserID']; //輸入使用者的帳號
     $Passwd = $_POST['Passwd']; //輸入使用者的密碼
 	$Class=$_POST['Class'];//輸入使用者班級
-	if(isset($_POST['addtickButton'])){
-	$sql="SELECT * FROM 123";	
+	if(isset($_POST['adduserButton'])){// 判斷新增票卷按鈕
+    $sql="SELECT * FROM user";	
     $result=$db->query($sql);
     $num = $result->rowCount();
     $num +=1;
-	$db->query("INSERT INTO 123 ( id, name,UserID, Passwd,Class) VALUES ( '$num' ,'$name','$UserID','$Passwd','$Class')"); 
+    }
+	if(isset($_POST['adduserButton'])){
+	$db->query("INSERT INTO user ( id, name,UserID, Passwd,Class) VALUES ( '$num' ,'$name','$UserID','$Passwd','$Class')"); 
 	}
 }
 ?>

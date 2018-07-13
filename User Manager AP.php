@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <form name="form" method="post" action="indexfinsh.php">
 <a href="adduser.php">申請帳號</a>
 <a href="revise.php">修改帳號</a>
