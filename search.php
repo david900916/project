@@ -1,7 +1,8 @@
 <form action="" method="POST">
+<h2>查詢帳戶</h2>
 <input type="text"  name="UserID" value="" placeholder="名稱" required>
 <input type="submit" name="Button" value="查詢">
-<a href="User Manager AP.php">返回</a>
+<a href="UserManagerAP.php">返回</a>
 </form>
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
