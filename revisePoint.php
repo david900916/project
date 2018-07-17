@@ -8,11 +8,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <input type="text"  name="UID" value="" placeholder="名稱" required>
 <input type="submit" name="search" value="查詢">
-<button onclick="copyToClipboard('$x[$i]')">Copy TEXT 1</button>
+
 <a href="PointManagerAP.php">返回</a>
 <a href="HOME.php">返回首頁</a>
 </form>
 <?php
+//<button onclick="copyToClipboard('$x[$i]')">Copy TEXT 1</button>
 if($_SESSION['UserID']!=NULL){
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $dsn = "mysql:host=localhost;dbname=test2";
@@ -25,15 +26,16 @@ $UID=$_POST['UID'];
  $i=0;
  while ($row = $result->fetch()) {
   // <p id="$x[i]">"給:$row[3]時間:$row[1]事件:$row[4]分數:$row[5]<br>"</p>
-   
-   $X[$i]=printf("給:$row[3]時間:$row[1]事件:$row[4]分數:$row[5]<br>");
+   printf("給:$row[3]時間:$row[1]事件:$row[4]分數:$row[5]<br>");
+   $X[$i]=("$row[3]$row[1]$row[4]$row[5]");
    $i++;
   }
 for($i=0;$i<$num;$i++)
 	//echo <button onclick="copyToClipboard('$x[$i]')">Copy TEXT 1</button> ;
-	 echo "<input type='button' value='複製紀錄$i' onclick=copyToClipboard('#x[$i]')>";
+	 echo "<p><input type='button' value='複製紀錄$i' onclick=copyToClipboard('$X[$i]')></p>";
  /*$num =Count($row);
-  printf( "$num");*/
+  printf( "$num");
+  printf( "$X[1]");*/
 }		
 }
 	}
