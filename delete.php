@@ -1,5 +1,7 @@
 <?php session_start(); ?>
 <h2>刪除帳戶</h2>
+<a href="UserManagerAP.php">返回</a>
+<a href="HOME.php">返回首頁</a>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <?php
 if($_SESSION['UserID']!=NULL)

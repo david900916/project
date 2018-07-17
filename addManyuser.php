@@ -27,7 +27,7 @@ $db = new PDO($dsn, 'root','');
     $result=$db->query($sql);
     $num = $result->rowCount();
     $num +=1;
-	$sql=$db->query("INSERT INTO user ( id, name,UserID, Passwd,Class) VALUES ( '$num' ,'$first','$UserID','$Passwd','$Class')"); 
+	$sql=$db->query("INSERT INTO user ( id, name,UserID, Passwd,Class,Point) VALUES ( '$num' ,'$first','$UserID','$Passwd','$Class',0)"); 
 	$row = $sql->fetch();
 	
 	}

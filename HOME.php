@@ -1,9 +1,9 @@
 <?php session_start(); ?>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<TH>首頁</TH>
+<h2>首頁</h2>
 <form name="form" method="post"><CENTER>
 <a href="UserManagerAP.php">使用者資料管理</a><P ALIGN=LEFT、CENTER、RIGHT>
-<a href="Point.php">積分管理</a><P ALIGN=LEFT、CENTER、RIGHT>
+<a href="PointManagerAP.php">積分管理</a><P ALIGN=LEFT、CENTER、RIGHT>
 <a href="UserQuery.php">使用者查詢</a><P ALIGN=LEFT、CENTER、RIGHT>
 <a href="Card.php">卡片</a><P ALIGN=LEFT、CENTER、RIGHT>
 <a href="index.php">登入</a><P ALIGN=LEFT、CENTER、RIGHT>
