@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <form name="form" method="post" action="indexfinsh.php">
 帳號：<input type="text" name="UserID" /> <br>

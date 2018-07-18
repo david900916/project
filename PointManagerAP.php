@@ -1,4 +1,12 @@
 <?php session_start(); ?>
+<<?php 
+if($_SESSION['UserID']=="")
+	printf("無使用者登入");
+else{
+	$name=$_SESSION['UserID'];
+printf("使用者$name");
+}
+?>
 <form name="form" method="post" action="indexfinsh.php">
 <h2>使用者資料管理</h2>
 <a href="addPoint.php">新增點數</a>

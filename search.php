@@ -1,9 +1,9 @@
 <form action="" method="POST">
-<h2>查詢帳戶</h2>
+<h2>查詢帳戶
 <input type="text"  name="UserID" value="" placeholder="名稱" required>
 <input type="submit" name="Button" value="查詢">
 <a href="UserManagerAP.php">返回</a>
-<a href="HOME.php">返回首頁</a>
+<a href="HOME.php">返回首頁</a></h2>
 </form>
 <?php
 

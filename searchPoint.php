@@ -1,9 +1,9 @@
 <form action="" method="POST">
-<h2>查詢點數</h2>
+<h2>查詢點數
 <input type="text"  name="UserID" value="" placeholder="名稱" required>
 <input type="submit" name="Button" value="查詢">
 <a href="PointManagerAP.php">返回</a>
-<a href="HOME.php">返回首頁</a>
+<a href="HOME.php">返回首頁</a></h2>
 </form>
 <?php
 
